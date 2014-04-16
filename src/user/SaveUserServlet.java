@@ -20,6 +20,16 @@ public class SaveUserServlet extends SaveServletBase {
     return new User(params);
   }
 
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    super.doPost(request, response);
+    String type = request.getParameter("type");
+    if (type.equals("patient"))
+      response.sendRedirect("./register_patient.jsp");
+    else if (type.equals("doctor"))
+      response.sendRedirect("./register_doctor.jsp");
+  }
+
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
   }

@@ -12,6 +12,11 @@
             <input type="<%= StringUtils.getAppropriateForm(attributeName) %>"
                    name="<%= attributeName %>" /><br>
         <% } %>
+        Type<select name="type">
+            <option value="patient">Patient</option>
+            <option value="doctor">Doctor</option>
+            <option value="admin">Administrator</option>
+        </select><br>
         <input type="submit" name="Register"/>
     </form>
 </body>
