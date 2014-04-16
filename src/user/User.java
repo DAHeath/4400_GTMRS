@@ -9,7 +9,7 @@ public class User extends ActiveRecordBase {
   public static final String[] attributeNames = {"username", "password"};
   public static final String[] attributeTypes = {"string", "string"};
 
-  User(Object... values) {
+  public User(String... values) {
     super(attributeTypes, values);
   }
 

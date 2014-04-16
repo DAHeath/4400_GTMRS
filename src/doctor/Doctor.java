@@ -30,7 +30,7 @@ public class Doctor extends ActiveRecordBase {
           "string"
   };
 
-  public Doctor(Object[] values) {
+  public Doctor(String[] values) {
     super(attributeTypes, values);
   }
 

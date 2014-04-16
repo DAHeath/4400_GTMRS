@@ -38,7 +38,7 @@ public class Patient extends ActiveRecordBase {
           "string"
   };
 
-  public Patient(Object... values) {
+  public Patient(String... values) {
     super(attributeTypes, values);
   }
 

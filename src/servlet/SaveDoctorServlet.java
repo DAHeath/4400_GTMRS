@@ -12,7 +12,7 @@ import static doctor.Doctor.attributeNames;
 
 public class SaveDoctorServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    Object[] params = new Object[attributeNames.length];
+    String[] params = new String[attributeNames.length];
     for (int i = 0; i < attributeNames.length; i++)
       params[i] = request.getParameter(attributeNames[i]);
     new Doctor(params).buildQuery().execute();
