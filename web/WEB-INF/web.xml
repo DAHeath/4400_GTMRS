@@ -6,7 +6,7 @@
            version="3.0">
     <servlet>
         <servlet-name>SaveUserServlet</servlet-name>
-        <servlet-class>servlet.SaveUserServlet</servlet-class>
+        <servlet-class>user.SaveUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SaveUserServlet</servlet-name>
@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>SavePatientServlet</servlet-name>
-        <servlet-class>servlet.SavePatientServlet</servlet-class>
+        <servlet-class>patient.SavePatientServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SavePatientServlet</servlet-name>
@@ -22,7 +22,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>SaveDoctorServlet</servlet-name>
-        <servlet-class>servlet.SaveDoctorServlet</servlet-class>
+        <servlet-class>doctor.SaveDoctorServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SaveDoctorServlet</servlet-name>
@@ -30,7 +30,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>SavePatientAllergyServlet</servlet-name>
-        <servlet-class>servlet.SavePatientAllergyServlet</servlet-class>
+        <servlet-class>patient.SavePatientAllergyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SavePatientAllergyServlet</servlet-name>
