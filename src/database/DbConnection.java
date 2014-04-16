@@ -35,5 +35,6 @@ public class DbConnection {
   private static void buildTables() {
     Query.fromFile(QUERY_BASE + "user/create_user.sql").execute();
     Query.fromFile(QUERY_BASE + "patient/create_patient.sql").execute();
+    Query.fromFile(QUERY_BASE + "doctor/create_doctor.sql").execute();
   }
 }

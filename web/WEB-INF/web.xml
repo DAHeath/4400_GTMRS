@@ -20,4 +20,12 @@
         <servlet-name>SavePatientServlet</servlet-name>
         <url-pattern>/save_patient</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>SaveDoctorServlet</servlet-name>
+        <servlet-class>servlet.SaveDoctorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveDoctorServlet</servlet-name>
+        <url-pattern>/save_doctor</url-pattern>
+    </servlet-mapping>
 </web-app>
