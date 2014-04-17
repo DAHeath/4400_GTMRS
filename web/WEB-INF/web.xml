@@ -5,35 +5,15 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
            version="3.0">
     <servlet>
-        <servlet-name>SaveUserServlet</servlet-name>
-        <servlet-class>user.SaveUserServlet</servlet-class>
+        <servlet-name>SaveServlet</servlet-name>
+        <servlet-class>servlet.SaveServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SaveUserServlet</servlet-name>
-        <url-pattern>/save_user</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>SavePatientServlet</servlet-name>
-        <servlet-class>patient.SavePatientServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SavePatientServlet</servlet-name>
-        <url-pattern>/save_patient</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>SaveDoctorServlet</servlet-name>
-        <servlet-class>doctor.SaveDoctorServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SaveDoctorServlet</servlet-name>
-        <url-pattern>/save_doctor</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>SavePatientAllergyServlet</servlet-name>
-        <servlet-class>patient.SavePatientAllergyServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SavePatientAllergyServlet</servlet-name>
-        <url-pattern>/save_patient_allergy</url-pattern>
+        <servlet-name>SaveServlet</servlet-name>
+        <url-pattern>/save/user</url-pattern>
+        <url-pattern>/save/doctor</url-pattern>
+        <url-pattern>/save/doctor_availability</url-pattern>
+        <url-pattern>/save/patient</url-pattern>
+        <url-pattern>/save/patient_allergy</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 public class DbConnection {
   private static Connection instance;
   private static final String URL = "jdbc:mysql://localhost:3306/";
+  //private static final String URL = "jdbc:mysql://academic-mysql.cc.gatech.edu/";
   private static final String DB_NAME = "gtmrs";
   private static final String DRIVER = "com.mysql.jdbc.Driver";
   private static final String USERNAME = "root";
@@ -37,5 +38,6 @@ public class DbConnection {
     Query.fromFile(QUERY_BASE + "patient/create_patient.sql").execute();
     Query.fromFile(QUERY_BASE + "patient/create_patient_allergy.sql").execute();
     Query.fromFile(QUERY_BASE + "doctor/create_doctor.sql").execute();
+    Query.fromFile(QUERY_BASE + "doctor/create_doctor_availability.sql").execute();
   }
 }
