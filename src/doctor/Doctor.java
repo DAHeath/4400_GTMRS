@@ -18,7 +18,7 @@ public class Doctor extends ActiveRecordBase {
           "room_number"
   };
 
-  public static final String[] attributeTypes = {
+  private static final String[] attributeTypes = {
           "string",
           "string",
           "string",

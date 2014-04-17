@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class SaveServlet extends HttpServlet {
-  private RecordFactory factory = new RecordFactory();
+  private final RecordFactory factory = new RecordFactory();
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String recordType = getRecordType(request);

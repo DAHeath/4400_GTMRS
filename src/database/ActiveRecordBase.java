@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ActiveRecordBase implements ActiveRecord {
-  private List<Attribute> attributes = new ArrayList<Attribute>();
+  private final List<Attribute> attributes = new ArrayList<Attribute>();
 
-  public ActiveRecordBase(String[] dataTypes, String[] values) {
+  protected ActiveRecordBase(String[] dataTypes, String[] values) {
     for (int i = 0; i < dataTypes.length; i++)
       addAttribute(dataTypes[i], values[i]);
   }
@@ -36,8 +36,8 @@ public abstract class ActiveRecordBase implements ActiveRecord {
   protected abstract Query getBaseQuery();
 
   private class Attribute {
-    private String dataType;
-    private String value;
+    private final String dataType;
+    private final String value;
 
     public Attribute(String dataType, String value) {
       this.dataType = dataType;

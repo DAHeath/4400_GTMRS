@@ -11,7 +11,7 @@ public class PatientAllergy extends ActiveRecordBase {
           "allergy"
   };
 
-  public static final String[] attributeTypes = {
+  private static final String[] attributeTypes = {
           "string",
           "string"
   };

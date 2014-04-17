@@ -22,7 +22,7 @@ public class Patient extends ActiveRecordBase {
           "card_number"
   };
 
-  public static final String[] attributeTypes = {
+  private static final String[] attributeTypes = {
           "string",
           "string",
           "string",

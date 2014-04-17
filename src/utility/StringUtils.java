@@ -18,7 +18,7 @@ public class StringUtils {
   }
 
   public static String getAppropriateForm(String in) {
-    String formTag = "";
+    String formTag;
     if (in.equals("password"))
       formTag = "password";
     else

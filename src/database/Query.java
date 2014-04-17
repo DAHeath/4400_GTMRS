@@ -9,8 +9,8 @@ import java.util.Date;
 import static database.DbConnection.connection;
 
 public class Query {
-  private String text;
-  private PreparedStatement statement;
+  private final String text;
+  private final PreparedStatement statement;
 
   public static Query fromFile(String filename) {
     return new Query(FileReader.readFile(filename));

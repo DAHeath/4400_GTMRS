@@ -3,7 +3,7 @@ package database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DbConnection {
+class DbConnection {
   private static Connection instance;
   private static final String URL = "jdbc:mysql://localhost:3306/";
   //private static final String URL = "jdbc:mysql://academic-mysql.cc.gatech.edu/";
