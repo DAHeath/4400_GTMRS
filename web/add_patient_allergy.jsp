@@ -6,7 +6,7 @@
     <title></title>
 </head>
 <body>
-    <form action="save/patient_allergy" method="post">
+    <form action="save_patient_allergy" method="post">
         <% for(String attributeName: PatientAllergy.attributeNames) { %>
         <%= StringUtils.removeUnderscoresAndAddCaps(attributeName)%>
         <input type="<%= StringUtils.getAppropriateForm(attributeName) %>"

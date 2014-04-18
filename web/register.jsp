@@ -6,7 +6,7 @@
     <title></title>
 </head>
 <body>
-    <form action="save/user" method="post">
+    <form action="save_user" method="post">
         <% for(String attributeName: User.attributeNames) { %>
             <%= StringUtils.removeUnderscoresAndAddCaps(attributeName)%>
             <input type="<%= StringUtils.getAppropriateForm(attributeName) %>"

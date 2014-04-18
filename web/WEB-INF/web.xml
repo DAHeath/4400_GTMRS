@@ -10,10 +10,10 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SaveServlet</servlet-name>
-        <url-pattern>/save/user</url-pattern>
-        <url-pattern>/save/doctor</url-pattern>
-        <url-pattern>/save/doctor_availability</url-pattern>
-        <url-pattern>/save/patient</url-pattern>
-        <url-pattern>/save/patient_allergy</url-pattern>
+        <url-pattern>/save_user</url-pattern>
+        <url-pattern>/save_doctor</url-pattern>
+        <url-pattern>/save_doctor_availability</url-pattern>
+        <url-pattern>/save_patient</url-pattern>
+        <url-pattern>/save_patient_allergy</url-pattern>
     </servlet-mapping>
 </web-app>
