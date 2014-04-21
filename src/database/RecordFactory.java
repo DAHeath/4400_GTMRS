@@ -2,8 +2,10 @@ package database;
 
 import doctor.Doctor;
 import doctor.DoctorAvailability;
+import doctor.DoctorRating;
 import patient.Patient;
 import patient.PatientAllergy;
+import payment.PaymentInformation;
 import user.User;
 
 public class RecordFactory {
@@ -16,10 +18,14 @@ public class RecordFactory {
       attributeNames = Doctor.attributeNames;
     else if (type.equals("doctor_availability"))
       attributeNames = DoctorAvailability.attributeNames;
+    else if (type.equals("doctor_rating"))
+      attributeNames = DoctorRating.attributeNames;
     else if (type.equals("patient"))
       attributeNames = Patient.attributeNames;
     else if (type.equals("patient_allergy"))
       attributeNames = PatientAllergy.attributeNames;
+    else if (type.equals("payment_information"))
+      attributeNames = PaymentInformation.attributeNames;
     return attributeNames;
   }
 
@@ -31,10 +37,14 @@ public class RecordFactory {
       record = new Doctor(values);
     else if (type.equals("doctor_availability"))
       record = new DoctorAvailability(values);
+    else if (type.equals("doctor_rating"))
+      record = new DoctorRating(values);
     else if (type.equals("patient"))
       record = new Patient(values);
     else if (type.equals("patient_allergy"))
       record = new PatientAllergy(values);
+    else if (type.equals("payment_information"))
+      record = new PaymentInformation(values);
     return record;
   }
 }

@@ -13,7 +13,9 @@
         <url-pattern>/save_user</url-pattern>
         <url-pattern>/save_doctor</url-pattern>
         <url-pattern>/save_doctor_availability</url-pattern>
+        <url-pattern>/save_doctor_rating</url-pattern>
         <url-pattern>/save_patient</url-pattern>
         <url-pattern>/save_patient_allergy</url-pattern>
+        <url-pattern>/save_payment_information</url-pattern>
     </servlet-mapping>
 </web-app>

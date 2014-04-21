@@ -13,5 +13,6 @@ create table if not exists Patients(
   annual_income integer (7),
   card_number varchar (16),
   foreign key (username) references Users(username),
+  foreign key (card_number) references PaymentInformation(card_number),
   primary key (username)
 );

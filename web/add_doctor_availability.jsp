@@ -12,6 +12,6 @@
         <input type="<%= StringUtils.getAppropriateForm(attributeName) %>"
            name="<%= attributeName %>" /><br>
         <% } %>
-    <input type="submit" name="Add Allergy"/>
+    <input type="submit" name="Add Availability"/>
 </body>
 </html>
