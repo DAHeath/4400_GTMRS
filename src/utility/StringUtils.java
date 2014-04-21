@@ -21,6 +21,8 @@ public class StringUtils {
     String formTag;
     if (in.equals("password"))
       formTag = "password";
+    else if (in.contains("date"))
+      formTag = "date";
     else
       formTag = "text";
     return formTag;

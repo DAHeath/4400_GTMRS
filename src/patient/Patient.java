@@ -25,7 +25,7 @@ public class Patient extends ActiveRecordBase {
   private static final String[] attributeTypes = {
           "string",
           "string",
-          "string",
+          "date",
           "string",
           "string",
           "string",

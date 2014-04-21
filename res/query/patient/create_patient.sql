@@ -1,7 +1,7 @@
 create table if not exists Patients(
   username varchar (30) NOT NULL,
   name varchar (30),
-  date_of_birth varchar (10),
+  date_of_birth date,
   gender varchar (1),
   address varchar (100),
   work_phone varchar (10),

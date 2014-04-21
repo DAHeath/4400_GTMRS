@@ -2,7 +2,7 @@ create table if not exists Visits (
   visit_id integer,
   doctor_username varchar (30),
   patient_username varchar (30),
-  date_of_visit varchar (10),
+  date_of_visit date,
   diastolic_pressure int,
   systolic_pressure int,
   billing_amount float,

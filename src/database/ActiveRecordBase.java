@@ -1,5 +1,7 @@
 package database;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +27,23 @@ public abstract class ActiveRecordBase implements ActiveRecord {
         query.substituteValue(i + 1, Float.parseFloat(attributes.get(i).value));      }
       else if (dataTypeIs(i, "int"))
         query.substituteValue(i+1, Integer.parseInt(attributes.get(i).value));
+      else if (dataTypeIs(i, "date")) {
+        parseDate(query, i);
+      }
     }
     return query;
+  }
+
+  private void parseDate(Query query, int i) {
+    SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+    java.util.Date d = null;
+    try {
+      System.out.println(attributes.get(i).value);
+      d = format.parse(attributes.get(i).value);
+    } catch (ParseException e) {
+      e.printStackTrace();
+    }
+    query.substituteValue(i+1, new java.sql.Date(d.getTime()));
   }
 
   private boolean dataTypeIs(int i, String string) {
