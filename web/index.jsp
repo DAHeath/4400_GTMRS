@@ -4,6 +4,7 @@
     <title></title>
   </head>
   <body>
-  This is the body!
+      Haven't registered yet?
+      <a href="/register.jsp">Click here to register now!</a>
   </body>
 </html>

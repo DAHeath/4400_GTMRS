@@ -2,8 +2,9 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Properties;
 
-class DbConnection {
+public class DbConnection {
   private static Connection instance;
   private static final String URL = "jdbc:mysql://localhost:3306/";
   //private static final String URL = "jdbc:mysql://academic-mysql.cc.gatech.edu/";
@@ -19,9 +20,15 @@ class DbConnection {
   }
 
   private static void createConnection() {
+    Properties props = new Properties();
+    props.put("user", "root");
+    props.put("password", "password");
+    props.put("useUnicode", "true");
+    props.put("useServerPrepStmts", "false");
+    props.put("characterEncoding", "UTF-8");
     try {
       Class.forName(DRIVER).newInstance();
-      instance = DriverManager.getConnection(URL + DB_NAME, USERNAME, PASSWORD);
+      instance = DriverManager.getConnection(URL + DB_NAME, props);
     } catch (Exception e) {
       e.printStackTrace();
     }

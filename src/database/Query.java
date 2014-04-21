@@ -3,6 +3,7 @@ package database;
 import utility.FileReader;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -29,6 +30,17 @@ public class Query {
       e.printStackTrace();
     }
     return s;
+  }
+
+  public ResultSet getResults() {
+    ResultSet res = null;
+    try {
+      statement.execute();
+      res = statement.getResultSet();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return res;
   }
 
   public void execute() {
