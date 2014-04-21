@@ -41,5 +41,7 @@ class DbConnection {
     Query.fromFile(QUERY_BASE + "doctor/create_doctor_availability.sql").execute();
     Query.fromFile(QUERY_BASE + "doctor/create_doctor_ratings.sql").execute();
     Query.fromFile(QUERY_BASE + "payment/create_payment_information.sql").execute();
+    Query.fromFile(QUERY_BASE + "surgery/create_surgery.sql").execute();
+    Query.fromFile(QUERY_BASE + "surgery/create_preoperative_medication.sql").execute();
   }
 }

@@ -6,6 +6,8 @@ import doctor.DoctorRating;
 import patient.Patient;
 import patient.PatientAllergy;
 import payment.PaymentInformation;
+import surgery.PreoperativeMedication;
+import surgery.Surgery;
 import user.User;
 
 public class RecordFactory {
@@ -26,6 +28,10 @@ public class RecordFactory {
       attributeNames = PatientAllergy.attributeNames;
     else if (type.equals("payment_information"))
       attributeNames = PaymentInformation.attributeNames;
+    else if (type.equals("surgery"))
+      attributeNames = Surgery.attributeNames;
+    else if (type.equals("preoperative_medication"))
+      attributeNames = PreoperativeMedication.attributeNames;
     return attributeNames;
   }
 
@@ -45,6 +51,10 @@ public class RecordFactory {
       record = new PatientAllergy(values);
     else if (type.equals("payment_information"))
       record = new PaymentInformation(values);
+    else if (type.equals("surgery"))
+      record = new Surgery(values);
+    else if (type.equals("preoperative_medication"))
+      record = new PreoperativeMedication(values);
     return record;
   }
 }

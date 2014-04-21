@@ -17,5 +17,7 @@
         <url-pattern>/save_patient</url-pattern>
         <url-pattern>/save_patient_allergy</url-pattern>
         <url-pattern>/save_payment_information</url-pattern>
+        <url-pattern>/save_surgery</url-pattern>
+        <url-pattern>/save_preoperative_medication</url-pattern>
     </servlet-mapping>
 </web-app>

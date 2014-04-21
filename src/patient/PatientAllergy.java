@@ -5,7 +5,7 @@ import database.Query;
 
 public class PatientAllergy extends ActiveRecordBase {
   private static final String INSERT_QUERY =
-          "insert into PatientAllergies values (?,?)";
+          "insert into PatientAllergies values (?,?);";
   public static final String[] attributeNames = {
           "username",
           "allergy"

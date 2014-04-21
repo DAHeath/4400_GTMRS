@@ -1,29 +1,23 @@
-package payment;
+package surgery;
 
 import database.ActiveRecordBase;
 import database.Query;
 
-public class PaymentInformation extends ActiveRecordBase {
+public class PreoperativeMedication extends ActiveRecordBase {
   private static final String INSERT_QUERY =
-          "insert into PaymentInformation values (?,?,?,?,?);";
+          "insert into PreoperativeMedications values (?,?);";
 
   public static final String[] attributeNames = {
-          "card_number",
-          "cardholder_name",
-          "cvv",
-          "date_of_expiry",
-          "type"
+          "cpt_code",
+          "preoperative_medication"
   };
 
   private static final String[] attributeTypes = {
           "string",
-          "string",
-          "int",
-          "string",
           "string"
   };
 
-  public PaymentInformation(String[] values) {
+  public PreoperativeMedication(String[] values) {
     super(attributeTypes, values);
   }
 

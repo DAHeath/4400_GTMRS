@@ -1,29 +1,25 @@
-package payment;
+package surgery;
 
 import database.ActiveRecordBase;
 import database.Query;
 
-public class PaymentInformation extends ActiveRecordBase {
+public class Surgery extends ActiveRecordBase {
   private static final String INSERT_QUERY =
-          "insert into PaymentInformation values (?,?,?,?,?);";
+          "insert into Surgeries values (?,?,?);";
 
   public static final String[] attributeNames = {
-          "card_number",
-          "cardholder_name",
-          "cvv",
-          "date_of_expiry",
-          "type"
+          "cpt_code",
+          "surgery_type",
+          "cost_of_surgery"
   };
 
   private static final String[] attributeTypes = {
           "string",
           "string",
-          "int",
-          "string",
-          "string"
+          "int"
   };
 
-  public PaymentInformation(String[] values) {
+  public Surgery(String[] values) {
     super(attributeTypes, values);
   }
 
@@ -31,4 +27,5 @@ public class PaymentInformation extends ActiveRecordBase {
   protected Query getBaseQuery() {
     return new Query(INSERT_QUERY);
   }
+
 }

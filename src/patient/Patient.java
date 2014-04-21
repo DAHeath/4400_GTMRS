@@ -5,7 +5,7 @@ import database.Query;
 
 public class Patient extends ActiveRecordBase {
   private static final String INSERT_QUERY =
-          "insert into Patients values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+          "insert into Patients values (?,?,?,?,?,?,?,?,?,?,?,?,?);";
   public static final String[] attributeNames = {
           "username",
           "name",
