@@ -9,6 +9,8 @@ import payment.PaymentInformation;
 import surgery.PreoperativeMedication;
 import surgery.Surgery;
 import user.User;
+import visit.Visit;
+import visit.VisitDiagnosis;
 
 public class RecordFactory {
 
@@ -32,6 +34,10 @@ public class RecordFactory {
       attributeNames = Surgery.attributeNames;
     else if (type.equals("preoperative_medication"))
       attributeNames = PreoperativeMedication.attributeNames;
+    else if (type.equals("visit"))
+      attributeNames = Visit.attributeNames;
+    else if (type.equals("visit_diagnosis"))
+      attributeNames = VisitDiagnosis.attributeNames;
     return attributeNames;
   }
 
@@ -55,6 +61,10 @@ public class RecordFactory {
       record = new Surgery(values);
     else if (type.equals("preoperative_medication"))
       record = new PreoperativeMedication(values);
+    else if (type.equals("visit"))
+      record = new Visit(values);
+    else if (type.equals("visit_diagnosis"))
+      record = new VisitDiagnosis(values);
     return record;
   }
 }
